@@ -8,14 +8,17 @@ var answers = [];
 
 $(document).ready(function() {
 
-    //Timer that begins when the page loads
-    setInterval(function(){
-        time--;
-        $("#timer").html("<h2>Time Remaining: " + time + "</h2>")}, 1000
-    );
+    
 
-    //Action to take when the submit button is pressed
-    $("#submit").click(function() {
+        //Timer that begins when the page loads
+        setInterval(function(){
+            time--;
+            $("#timer").html("<h2>Time Remaining: " + time + "</h2>")}, 1000
+        );
+   
+
+    //function to go through the user answers and tally number correct, wrong, and unanswered
+   function tallyScore() {
         for(j = 0; j < btName.length; j++) {
             //looks up the value of the chosen answer
             var bVal = $('input[name=' + btName[j] + ']:checked').val();
@@ -44,7 +47,9 @@ $(document).ready(function() {
         //Show the number of right and wrong answers
         $("#quiz").html("<h3>Correct Answers: " + correct + "</h3><h3>Incorrect Answers: " + wrong + "</h3><h3>Unasnwerd Questions: " + noAnswer + "</h3>");
 
-    });
+    };
+
+    $("#submit").click(tallyScore);
 });
 
 //store button names in an array
