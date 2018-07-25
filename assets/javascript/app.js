@@ -1,5 +1,5 @@
 //Global variables
-var time = 30;
+var time = 240;
 var correct = 0;
 var wrong = 0;
 var noAnswer = 0;
@@ -7,16 +7,7 @@ var btName = ["bt1", "bt2", "bt3", "bt4", "bt5", "bt6", "bt7", "bt8", "bt9", "bt
 var answers = [];
 
 $(document).ready(function() {
-
-    
-
-        //Timer that begins when the page loads
-        setInterval(function(){
-            time--;
-            $("#timer").html("<h2>Time Remaining: " + time + "</h2>")}, 1000
-        );
    
-
     //function to go through the user answers and tally number correct, wrong, and unanswered
    function tallyScore() {
         for(j = 0; j < btName.length; j++) {
@@ -49,11 +40,26 @@ $(document).ready(function() {
 
     };
 
+    //End the quiz and count right and wrong answers
     $("#submit").click(tallyScore);
-});
+    //Timer that begins when the page loads
+    setInterval(function(){
+        time--;
+        //End the quiz if time expires
+        if (time == 0) {
+            tallyScore();
+        }
+        mins = Math.floor(time / 60);
+        secs = time % 60;
+        //Update the onscreen timer every second
+        if (secs < 10) {
+            $("#timer").html("<h2>Time Remaining: " + mins + ":" + "0" + secs + "</h2>");
+        }
+        else {
+            $("#timer").html("<h2>Time Remaining: " + mins + ":" +  secs + "</h2>");          
+        }
+    }, 1000
+        
+    );
 
-//store button names in an array
-//for name go through the array
-//turn the value into an integer parseInt(value, 10)  //the ten signifies base 10
-//push value into a new array
-//find the sum of all the array values
+});
