@@ -6,7 +6,13 @@ body {
 }
 #all {
     background-color: #FDDA9C;
+    padding-bottom: 5px;
     
+}
+#header {
+    background-color: #3C8F5B;
+    border: 3px solid #82473D;
+    color: rgba(253, 251, 251, 0.911);
 }
 #question {
     margin-bottom: 20px;
