@@ -1,4 +1,13 @@
 
+body {
+    background-image: url("../images/pencil.jpg");
+    background-repeat: repeat-x;
+    background-color: #FBC784;
+}
+#all {
+    background-color: #FDDA9C;
+    
+}
 #question {
     margin-bottom: 20px;
 }
