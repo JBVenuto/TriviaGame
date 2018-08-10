@@ -6,6 +6,7 @@ This game takes you back to your High School World History class. You will have 
 -------
 ## Technology Used 
 This game was written with HTML5, CSS3, JavaScript, and jQuery 3.3.1
+Background image was taken by [Erol Ahmed](https://unsplash.com/@erol)
 ------
 ## Screenshot
-(assets/images/screenshot.jpg)
+![screenshot](assets/images/screenshot.jpg)
