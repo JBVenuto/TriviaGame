@@ -2,7 +2,8 @@
 body {
     background-image: url("../images/books1.jpg");
     background-repeat: repeat-x;
-    background-color: #FBC784;
+    /* background-color: #FBC784; */
+    background-color: rgb(65, 37, 0);
 }
 #all {
     background-color: #FDDA9C;
@@ -10,12 +11,22 @@ body {
     
 }
 #header {
+    text-align: center;
+    margin-top: 3px;
     background-color: #3C8F5B;
     border: 3px solid #82473D;
     color: rgba(253, 251, 251, 0.911);
+    padding-left: 8px;
+}
+#timer {
+    padding-left: 8px;
 }
 #question {
     margin-bottom: 20px;
+    padding-left: 8px;
+}
+#submitBtn {
+    padding-left: 8px;
 }
 #submit {
     margin-right: auto;
